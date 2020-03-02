@@ -15,9 +15,7 @@
 #include "ADC.h"
 #include "LCD.h"
 
-#define Data_Port      PORTC 
-#define Command_Port   PORTD
-#define Degree_Symbol 0xDF
+#define DEGREE_SYMBOL 0xDF
 
 int main()
 {
@@ -36,7 +34,7 @@ int main()
 		C = (ReadADC(0)*4.88);                                  // Read channel 0 where LM35 connected
 		C = (C/10.00);
 
-		sprintf(Temperature,"%d%cC  ", (int)C, Degree_Symbol);  // Convert integer value to ASCII string 
+		sprintf(Temperature,"%d%cC  ", (int)C, DEGREE_SYMBOL);  // Convert integer value to ASCII string 
 		display(Temperature);
 		
 		_delay_ms(1000);

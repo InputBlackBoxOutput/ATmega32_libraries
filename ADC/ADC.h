@@ -8,6 +8,7 @@
 #define ADC_H
 
 // Function to initialize ADC
+// Note: The entire PORTA gets utilized when initADC() is called
 void initADC(void);
 
 // Function to get value from specific ADC channel
